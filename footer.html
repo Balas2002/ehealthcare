@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<style>
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#333333;
+   color: white;
+   text-align: center;
+}
+   footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 22px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+  color:#FFFF66;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color:#FFFF33;
+      text-decoration: none;
+  }
+     footer .glyphicon {
+      font-size: 15px;
+      margin-bottom: 0px;
+      color: #f4511e;
+  } 
+   </style>
+
+<body>
+<!-- Footer -->
+<footer class="text-center ">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p  style="font-size:12px" >Copyright<a href="http://labaidgroup.com/specialized/doctor" data-toggle="tooltip" title="e-Healthcare">@e-Healthcare </a></p> 
+</footer>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+system
+user_guide
+application/*
+
+!application/config
+!application/views
+!application/models
+!application/controllers
